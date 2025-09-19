@@ -28,7 +28,6 @@ const page = () => {
           p1={contentData.metaDescription}
         />
         {/* Poster */}
-
         {/* Content1 */}
         <div className="flex items-center justify-center">
           <div className="mt-10 px-4 md:px-20">
@@ -37,7 +36,9 @@ const page = () => {
                 src={`${contentData.h2Image}`}
                 width={500}
                 height={400}
-                alt={contentData.h2Image.split("/").pop()?.split(".")[0] || "image"}
+                alt={
+                  contentData.h2Image.split("/").pop()?.split(".")[0] || "image"
+                }
                 className="object-cover"
               />
               <div className="flex flex-col items-center justify-center">
@@ -64,27 +65,25 @@ const page = () => {
           </div>
         </div>
         {/* Content1 */}
-
         {/* Let's Start a Conversation */}
         <div className="mt-16">
           <div className="text-center text-4xl font-extrabold text-main">
-            Let&apos;s Start a Conversation
+            Have a business enquiry? Contact us today!
           </div>
           <div className="border-double text-center">
-            <a id="cta-id" href={`tel:${ContactInfo.tel}`}>
+            <a id="cta-id" href={`mailto:${ContactInfo.mail}`}>
               <button
                 id="cta-id"
                 className="mt-3 rounded-lg bg-main px-4 py-3 font-bold tracking-wide text-white shadow-lg hover:bg-minor"
               >
-                {ContactInfo.No}
+                {ContactInfo.mail}
               </button>
             </a>
           </div>
         </div>
-        {/* Let's Start a Conversation */}
-
+        s{/* Let's Start a Conversation */}
         {/* Content 2 */}
-        <div className="mt-16 grid w-full grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-24 items-center">
+        <div className="mt-16 grid w-full grid-cols-1 items-center gap-6 px-4 md:grid-cols-2 md:px-24">
           <div className="flex w-full flex-col justify-around gap-3">
             <div>
               <h2 className="text-3xl font-bold">{contentData?.h3}</h2>
@@ -98,14 +97,15 @@ const page = () => {
             <Image
               src={`${contentData.h3Image}`}
               className="h-[350px] w-full rounded-lg border object-cover shadow-lg"
-              alt={contentData.h3Image.split("/").pop()?.split(".")[0] || "image"}
+              alt={
+                contentData.h3Image.split("/").pop()?.split(".")[0] || "image"
+              }
               width={1000}
               height={500}
             />
           </div>
         </div>
         {/* Content 2 */}
-
         {/* Call to Action */}
         <div className="group mx-4 mt-16 flex w-11/12 flex-col items-center justify-center gap-6 px-10 md:mx-0 md:mb-4 md:flex-row md:space-x-2 xl:w-full">
           <Image
@@ -129,7 +129,6 @@ const page = () => {
           </Link>
         </div>
         {/* Call to Action */}
-
         {/* Map */}
         <div className="mt-10 w-full">
           <iframe
